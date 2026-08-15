@@ -24,9 +24,10 @@ const STATES = [
 ];
 
 const field =
-  "h-10 w-full rounded-xl border border-[#7f1813]/30 bg-background px-3 text-[0.88rem] outline-none transition-colors focus-visible:border-[#7f1813] focus-visible:ring-2 focus-visible:ring-[#7f1813]/25 sm:h-11 sm:px-3.5 sm:text-[0.9rem]";
+  "h-10 w-full rounded-xl border border-[#7f1813]/50 bg-background px-3 text-[0.88rem] outline-none transition-colors focus-visible:border-[#7f1813] focus-visible:ring-2 focus-visible:ring-[#7f1813]/25 sm:h-11 sm:px-3.5 sm:text-[0.9rem]";
 
-const label = "mb-1 block text-[0.68rem] font-bold uppercase tracking-wide text-muted-foreground sm:text-[0.72rem]";
+const label = "mb-1 block text-[0.68rem] font-bold uppercase tracking-wide text-black sm:text-[0.72rem]";
+
 
 /** Auto-scrolling university logo ribbon. Pure CSS, duplicated track for a seamless loop. */
 export function UniversityLogoMarquee() {
@@ -116,9 +117,10 @@ export function CounsellingForm({
         </div>
       </div>
 
-      <div className="mt-3 hidden sm:block">
+      <div className="mt-3">
         <UniversityLogoMarquee />
       </div>
+
 
       <form
         className="mx-auto mt-4 grid w-full max-w-md gap-2.5 sm:max-w-none sm:grid-cols-2 sm:gap-3"
