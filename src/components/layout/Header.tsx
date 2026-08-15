@@ -68,14 +68,14 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur-xl">
-      <div className="container-page flex h-16 items-center gap-3 lg:h-[4.5rem] lg:gap-4">
+      <div className="container-page flex h-[4.5rem] items-center gap-3 lg:h-[5.25rem] lg:gap-4">
         <AppLink to="/" className="flex min-w-0 shrink-0 items-center" aria-label="Degreekhojo home">
           <img
             src="/degreekhojo-logo.png"
             alt="Degreekhojo logo"
             width={180}
             height={48}
-            className="h-12 w-auto object-contain sm:h-14 lg:h-[3.75rem]"
+            className="h-14 w-auto object-contain sm:h-16 lg:h-[4.75rem]"
           />
         </AppLink>
 
@@ -155,7 +155,7 @@ export function Header() {
       )}
 
       {open && (
-        <div className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-border bg-background xl:hidden">
+        <div className="max-h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-border bg-background xl:hidden">
           <nav aria-label="Mobile" className="container-page py-4">
             <ul className="grid gap-1 sm:grid-cols-2">
               {mobileNav.map((link) => (

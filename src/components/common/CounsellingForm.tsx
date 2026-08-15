@@ -107,7 +107,7 @@ export function CounsellingForm({
           alt="Degreekhojo"
           width={180}
           height={48}
-          className="h-8 w-auto shrink-0 object-contain sm:h-10"
+          className="h-12 w-auto shrink-0 object-contain sm:h-14"
         />
         <div className="min-w-0">
           <h2 className="font-display text-[1.02rem] font-extrabold leading-snug text-foreground sm:text-xl">
