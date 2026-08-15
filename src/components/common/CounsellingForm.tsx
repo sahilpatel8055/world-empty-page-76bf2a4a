@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CheckCircle2, Headphones, ShieldCheck } from "lucide-react";
+import { CheckCircle2, ShieldCheck } from "lucide-react";
 import { universities } from "@/lib/content";
 import { universityLogo } from "@/lib/assets";
 
@@ -24,9 +24,9 @@ const STATES = [
 ];
 
 const field =
-  "h-11 w-full rounded-xl border border-input bg-background px-3.5 text-[0.9rem] outline-none transition-colors focus-visible:border-[#7f1813] focus-visible:ring-2 focus-visible:ring-[#7f1813]/25";
+  "h-10 w-full rounded-xl border border-[#7f1813]/30 bg-background px-3 text-[0.88rem] outline-none transition-colors focus-visible:border-[#7f1813] focus-visible:ring-2 focus-visible:ring-[#7f1813]/25 sm:h-11 sm:px-3.5 sm:text-[0.9rem]";
 
-const label = "mb-1 block text-[0.72rem] font-bold uppercase tracking-wide text-muted-foreground";
+const label = "mb-1 block text-[0.68rem] font-bold uppercase tracking-wide text-muted-foreground sm:text-[0.72rem]";
 
 /** Auto-scrolling university logo ribbon. Pure CSS, duplicated track for a seamless loop. */
 export function UniversityLogoMarquee() {
@@ -99,25 +99,29 @@ export function CounsellingForm({
   }
 
   return (
-    <div className={compact ? "p-5 sm:p-6" : "p-5 sm:p-8"}>
-      <div className="flex flex-col items-center gap-3 text-center sm:flex-row sm:items-start sm:text-left">
-        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[#7f1813] text-white">
-          <Headphones className="h-5 w-5" />
-        </span>
+    <div className={compact ? "p-4 sm:p-6" : "p-4 sm:p-8"}>
+      <div className="flex flex-col items-center gap-2.5 text-center sm:flex-row sm:items-start sm:text-left">
+        <img
+          src="/degreekhojo-logo.png"
+          alt="Degreekhojo"
+          width={180}
+          height={48}
+          className="h-8 w-auto shrink-0 object-contain sm:h-10"
+        />
         <div className="min-w-0">
-          <h2 className="font-display text-lg font-extrabold leading-snug text-foreground sm:text-xl">
+          <h2 className="font-display text-[1.02rem] font-extrabold leading-snug text-foreground sm:text-xl">
             {title}
           </h2>
-          <p className="mt-1.5 text-[0.85rem] leading-relaxed text-muted-foreground">{subtitle}</p>
+          <p className="mt-1 text-[0.8rem] leading-snug text-muted-foreground sm:text-[0.85rem]">{subtitle}</p>
         </div>
       </div>
 
-      <div className="mt-4">
+      <div className="mt-3 hidden sm:block">
         <UniversityLogoMarquee />
       </div>
 
       <form
-        className="mx-auto mt-5 grid w-full max-w-md gap-3 sm:max-w-none sm:grid-cols-2"
+        className="mx-auto mt-4 grid w-full max-w-md gap-2.5 sm:max-w-none sm:grid-cols-2 sm:gap-3"
         onSubmit={(e) => {
           e.preventDefault();
           setSent(true);
@@ -151,7 +155,7 @@ export function CounsellingForm({
             className={field}
           />
         </label>
-        <div className="grid grid-cols-2 gap-3 sm:col-span-2">
+        <div className="grid grid-cols-2 gap-2.5 sm:col-span-2 sm:gap-3">
           <label className="block min-w-0">
             <span className={label}>Course :</span>
             <select required name="course" defaultValue="" className={field}>
@@ -181,7 +185,7 @@ export function CounsellingForm({
         </div>
         <button
           type="submit"
-          className="h-12 rounded-xl bg-[#7f1813] text-sm font-bold text-white transition-opacity hover:opacity-90 sm:col-span-2"
+          className="h-11 rounded-xl bg-[#7f1813] text-sm font-bold text-white transition-opacity hover:opacity-90 sm:col-span-2 sm:h-12"
         >
           Get free counselling
         </button>
