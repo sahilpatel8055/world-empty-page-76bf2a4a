@@ -209,7 +209,7 @@ function Page() {
         meta={
           <>
             <div className="mb-5 max-w-xl">
-              <QuickEnquiry heading={`Enquire about ${u.shortName} ${p.shortName}`} />
+              <QuickEnquiry heading={`Enquire about ${u.shortName}`} highlight={`${p.shortName} admission`} />
             </div>
             <UpdatedStamp date={offering.lastUpdated} verified={offering.verified} />
           </>

@@ -119,7 +119,7 @@ function Page() {
             {family.name}. Everything below is what those universities publish officially.
           </p>
           <div className="mt-5 max-w-xl">
-            <QuickEnquiry heading={`Talk to a ${specialisation.name} counsellor`} />
+            <QuickEnquiry heading="Talk to a" highlight={`${specialisation.name} counsellor`} />
           </div>
           <div className="mt-5">
             <BackToPillar href={pillar} label={`Back to ${family.name} overview`} />

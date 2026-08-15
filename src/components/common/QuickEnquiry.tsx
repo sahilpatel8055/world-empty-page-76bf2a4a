@@ -16,11 +16,13 @@ const pad = (n: number) => String(n).padStart(2, "0");
  * is half-visible on landing.
  */
 export function QuickEnquiry({
-  heading = "Take a step towards your career growth",
+  heading = "Take a step towards your",
+  highlight = "Online degree career",
   offer = "Get up to ₹15,000 off",
   className = "",
 }: {
   heading?: string;
+  highlight?: string;
   offer?: string;
   className?: string;
 }) {
@@ -45,8 +47,11 @@ export function QuickEnquiry({
     >
       <p className="flex items-center gap-2 font-display text-[0.98rem] font-extrabold text-foreground sm:text-lg">
         <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500" />
-        {heading}
+        <span>
+          {heading} <span className="text-[#7f1813]">{highlight}</span>
+        </span>
       </p>
+
 
       <div className="mt-3 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-dashed border-[#7f1813]/45 bg-[#7f1813]/[0.06] px-3 py-2.5">
         <p className="flex w-full items-start gap-2 text-[0.8rem] leading-tight sm:w-auto">
@@ -56,9 +61,7 @@ export function QuickEnquiry({
               Limited time offer
             </span>
             <span className="block font-bold text-foreground">
-              <mark className="rounded-md bg-yellow-300/80 px-1.5 py-0.5 font-display text-[1.02rem] font-extrabold text-[#7f1813]">
-                {offer}
-              </mark>
+              <span className="text-shine font-display text-[1.06rem] font-extrabold">{offer}</span>
             </span>
           </span>
         </p>
