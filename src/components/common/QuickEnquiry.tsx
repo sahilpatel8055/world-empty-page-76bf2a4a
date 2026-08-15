@@ -61,9 +61,7 @@ export function QuickEnquiry({
               Limited time offer
             </span>
             <span className="block font-bold text-foreground">
-              <mark className="rounded-md bg-yellow-300/80 px-1.5 py-0.5 font-display text-[1.02rem] font-extrabold text-[#7f1813]">
-                {offer}
-              </mark>
+              <span className="text-shine font-display text-[1.06rem] font-extrabold">{offer}</span>
             </span>
           </span>
         </p>
