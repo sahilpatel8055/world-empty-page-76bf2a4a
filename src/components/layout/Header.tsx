@@ -68,7 +68,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur-xl">
-      <div className="container-page flex h-16 items-center gap-3 lg:h-[4.5rem] lg:gap-4">
+      <div className="container-page flex h-[4.5rem] items-center gap-3 lg:h-[5.25rem] lg:gap-4">
         <AppLink to="/" className="flex min-w-0 shrink-0 items-center" aria-label="Degreekhojo home">
           <img
             src="/degreekhojo-logo.png"
