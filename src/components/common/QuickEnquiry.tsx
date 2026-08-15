@@ -26,20 +26,23 @@ export function QuickEnquiry({
   offer?: string;
   className?: string;
 }) {
-  const [left, setLeft] = useState(() => msToMidnight());
+  const [left, setLeft] = useState<number | null>(null);
   const [sent, setSent] = useState(false);
 
   useEffect(() => {
+    setLeft(msToMidnight());
     const id = window.setInterval(() => setLeft(msToMidnight()), 1000);
     return () => window.clearInterval(id);
   }, []);
 
-  const total = Math.max(0, Math.floor(left / 1000));
+
+  const total = left === null ? null : Math.max(0, Math.floor(left / 1000));
   const units = [
-    { v: pad(Math.floor(total / 3600)), l: "HRS" },
-    { v: pad(Math.floor((total % 3600) / 60)), l: "MIN" },
-    { v: pad(total % 60), l: "SEC" },
+    { v: total === null ? "--" : pad(Math.floor(total / 3600)), l: "HRS" },
+    { v: total === null ? "--" : pad(Math.floor((total % 3600) / 60)), l: "MIN" },
+    { v: total === null ? "--" : pad(total % 60), l: "SEC" },
   ];
+
 
   return (
     <div
