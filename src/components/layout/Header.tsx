@@ -155,7 +155,7 @@ export function Header() {
       )}
 
       {open && (
-        <div className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-border bg-background xl:hidden">
+        <div className="max-h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-border bg-background xl:hidden">
           <nav aria-label="Mobile" className="container-page py-4">
             <ul className="grid gap-1 sm:grid-cols-2">
               {mobileNav.map((link) => (
