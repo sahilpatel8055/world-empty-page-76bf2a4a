@@ -75,7 +75,7 @@ export function Header() {
             alt="Degreekhojo logo"
             width={180}
             height={48}
-            className="h-9 w-auto object-contain lg:h-11"
+            className="h-11 w-auto object-contain lg:h-14"
           />
         </AppLink>
 
